@@ -45,7 +45,7 @@ body{
 	font-family: Arial;
 	font-weight: bold;
 	
-}
+}z
 #formulario form label{
 	
 	flex: 1;
@@ -63,3 +63,9 @@ body{
 	margin-top: 10px;
 }
 
+
+
+
+@media screen (max-width:480px) {
+	
+}
