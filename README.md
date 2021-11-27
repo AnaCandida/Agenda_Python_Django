@@ -25,17 +25,18 @@ Para conseguir rodar o app da agenda você precisa:
 
  - garanta que tenha o python3 instalado.Use: python3 -v
  - Use um ambiente virtual Python:
- - 		  -Instale o virtualenv ;
- - 		  - Crie uma virtual **env** para o projeto e ative-a;
- - 		  - Verifique se vc tem a versão 3.2.9 do Djanjo, se não, instale dentro da env a versão correta.
- - 		  -  No terminal, atualize o banco de dados da venv:
-	
+ - 1) instale o virtual env;
+ - 2) crie uma virtual env para o projeto e ative-a;
+ - 3) verifique a versão do Django, o projeto utiliza a 3.2.9v
+ - 4)atualize o banco de dados;
+ 
 		  python3 manage.py migrate
 
- - 		  -Execute o servidor para rodar o app:
- 
+ - 5) execute o servidor para rodar o app localmente
+
 
 		    python3 manage.py runserver
+
 
 Ajuda com o virtualenv
 https://docs.python.org/3/library/venv.html
