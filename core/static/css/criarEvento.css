@@ -1,8 +1,4 @@
-h2{
-	font-family: Arial;
-	text-align: center;
 
-}
 
 #formulario{
 	display: flex;
@@ -11,36 +7,52 @@ h2{
 	
 
 }
+
+
+.container-form{
+	width:140%;
+	height: 100%;
+	padding:30px 8px 8px 8px;
+
+}
+
 label{
 	position: relative;
-	font-family: Arial;
 	font-weight: bold;
+	color: darkred;
 	
 }
-#boxform{
-border: 8px solid #2d2d39;
-padding: 8px;
-
 	
-}
 #boxform input{
 		position: relative;
 		float: right;
-		width: 200px;
+		width: 50%;
+		height: 2rem;
+		border-radius: 10px;
 }
 
 #descricao textarea{
 		position: relative;
-		width: 200px;
+		width: 100%;
 
 
 }
 
+#boxform #box{
+width:unset;
 
-button{
-	width: 75px;
-	height: 35px;
-	font-family: Arial;
-	font-size: 12px;
-	font-weight: bold;
+}
+ 
+#box > button[name="salvar"]{
+	/* background-color: black; */
+	width:unset;
+	width:200px;
+	margin-right:10px;
+}
+#box > a > button[name="cancelar"]{
+	background-color: rgba(139,0,0,.4);
+	width:unset;
+	width:200px;
+
+
 }

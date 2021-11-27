@@ -1,75 +1,73 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-{% block content %} 
-				
+<main
+  class="container"
+  style="background-image: url('{% static 'img\capa.png' %}')"
+>
+  <section class="container-conteudo">
+    <h2 class="title-padrao">Novo Evento</h2>
+
+    <form id="formulario" action="submit" method="POST">
+      {% csrf_token %}
+      <div id="boxform" class="container-form">
+        <input type="number" name="id_evento" value="{{evento.id}}" hidden />
+
+      
+        <div alt="Divi de titulo">
+          <label class="form-label">Titulo</label> &nbsp;
+          <input
+            type="text"
+            name="titulo"
+            size="22"
+            value="{{evento.titulo}}"
+          /><br />
+        </div>
+
+        <br />
+
+        <div>
+          <label>DataEvento</label> &nbsp;
+          <input
+            type="dateTime-Local"
+            name="data_evento"
+            value="{{evento.get_data_input_evento}}"
+          /><br />
+        </div>
+        <br />
+
+        <div>
+          <label>Local do evento</label> &nbsp;
+          <input
+            type="text"
+            name="local"
+            size="22"
+            value="{{evento.local}}"
+          /><br />
+        </div>
+        <br />
 
 
-<main class="container" style="background-image: url('{% static 'img\capa.png' %}');"> 
 
-	<section  class="container-conteudo">
-	
-	<h2 class="title-padrao">Novo Evento</h2>
-
-
-				<form id ='formulario' action="submit" method="POST">{% csrf_token %}
-					<div id ='boxform'>
-									<input type="number" name="id_evento" value="{{evento.id}}" hidden>
-
-
-								<div alt='Divi de titulo'>
-									<label>Titulo</label> &nbsp;
-									
-										 <input type="text" name="titulo" size="22" value="{{evento.titulo}}"><br>
-									</div>
-
-									<br>
-								<div>
-
-								<label>DataEvento</label> &nbsp;
-									 
-									<input type="dateTime-Local" name="data_evento" value="{{evento.get_data_input_evento}}"><br>
-
-
-							   </div>
-									<br>
-
-
-									<div>
-								<label>Local do evento</label> &nbsp;
-									
-										<input type="text" name="local" size="22" value="{{evento.local}}"><br>
-								</div>
-								<br>
-
-
-
-
-								<div id ='descricao'>
-								<label>Descrição</label>&nbsp;
-									<br><br>
-										<textarea name="Descrição" rows="5" cols="24">
+        <div id="descricao">
+          <label>Descrição</label>&nbsp; <br /><br />
+          <textarea name="Descrição" rows="5" cols="24">
 
 											{{evento.descricao}}
 										</textarea>
-								</div>
-									<br><br>
+        </div>
+        <br /><br />
 
+        <div id="box">
+          <button class="btn-padrao" type="submit" name="salvar">Salvar</button>
+          <a href="/">
+            <button class="btn-padrao" type="button" name="cancelar">
+              Cancelar
+            </button>
+          </a>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
 
-
-									<input class='btn-padrao'  type="submit" name="Salvar" value="salvar"/> 
-
-								<!-- <button type="submit">Salvar</button>  -->
-								<a href="/">
-								
-									<input class='btn-padrao'  type="submit" name="Cancelar" value="Cancelar"/>
-
-									<!-- <button type="button" name="descricao"> Cancelar</button> -->
-								 </a>
-				</div>
-				</form>
-		
-			</section>
-			</main> 
-
-{% endblock %}    
+{% endblock %}
