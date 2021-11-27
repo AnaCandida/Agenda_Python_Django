@@ -1,12 +1,11 @@
-<html>
-	<head>
-			<title>Evento</title>
-			<meta charset="utf-8">
-			{% load static %}
-			<link rel="stylesheet" type="text/css" href='{% static "css/criarEvento.css" %}'>
-	</head>
-	<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
 				
+
+
+<main class="container" style="background-image: url('{% static 'img\capa.png' %}');"> 
 				<h2>Evento</h2>
 
 				<form id ='formulario' action="submit" method="POST">{% csrf_token %}
@@ -57,5 +56,6 @@
 				</div>
 				</form>
 
-	</body>
-</html>
+			</main> 
+
+{% endblock %}    

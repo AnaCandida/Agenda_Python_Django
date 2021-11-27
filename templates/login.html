@@ -1,48 +1,29 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
 
-<html>
+{% block content %} 
 
+    <main class="container" style="background-image: url('{% static 'img\capa.png' %}');"> 
 
-    <head>
-
-            <title>Login</title>
-            <meta charset="utf-8">
-            {% load static %}
-            <link rel="stylesheet" type="text/css" href='{% static "css/loginstyle.css" %}'>
-
-    </head>
-
-    <body>
-
-        <div id='check'>
-            <img src='{% static "img/check.jpg" %}'>
-            <img src='{% static "img/check.jpg" %}'>
-            <img src='{% static "img/check.jpg" %}'>
-        </div>
-
-
-
+        <!-- <img class ="bg-body"href="{% static 'img\capa.png' %}"> -->
 
 
         <div id="formulario">
-           
+          
             
-                
-                <form action="submit" method="POST">{% csrf_token %}
-                    <h1 id='titulo'>Login</h1>
-                    <div align = 'center'> 
-                            
-                        <label>Usuário</label>
+             <form action="submit" method="POST">{% csrf_token %}
+                    <h1   id='titulo'>Login</h1>
+                    <div class="c-input">
+                        <input id='name' type="text" name="username" placeholder="Usuário" />
+                        <i data-feather="user"></i>
+              
+                        <input id='password' type="password" name="password"  placeholder="Senha" />
+                        <i data-feather="lock"></i>
+                      </div>
+                   
+                      <input class='btn-padrao'  type="submit" name="submit" value="Entrar" id="submit" />
+                      <!-- <button type="submit"> Entrar </button> -->
 
-                        <input id='name' type="text" name="username" size="10px"><br>
-
-                        <label>Senha</label>
-
-                        <input id='password' type="password" name="password" size="10px"><br>
-
-                        <button type="submit"> Entrar </button>
-                     </div>
-               
                 </form>
 
          </div>
@@ -52,5 +33,13 @@
             </div>
         {% endfor %}
 
-    </body>  
-</html>
+    </main> 
+
+{% endblock %}    
+
+
+
+
+
+
+

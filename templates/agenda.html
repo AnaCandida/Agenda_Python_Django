@@ -1,32 +1,29 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
 
-<html>
-	{% load static %}
-	<head>
-
-		<title>Agendamento</title>
-		<meta charset="utf-8">
-		 
-		<link rel="stylesheet" type="text/css" href="{% static 'css/agendamento.css' %}">
-	</head>
+{% block content %} 
 
 
-	<body>
-			<h2 id = 'ag'>Agendamentos</h2>
 
-						
+<main class="container" style="background-image: url('{% static 'img\capa.png' %}');"> 
+
+	
 						
 
-			<ul  id='IconAgen' style="font-size: 18px">
+			<ul  class="container-conteudo"id='IconAgen'>
 
+				<h2 class="title-padrao" id ='ag'>Agendamentos</h2>
+		
+				<div class="board">
 				{% for evento in eventos %}
-					
-					<div style={% if evento.evento_atrasado %} 'color: red'	 {% endif %}>
+					<div  style={% if evento.evento_atrasado %} 'color: red'	 {% endif %}>
 
-						<li>{{evento.titulo}} - {{evento.getDataEvento}} 
+						<li>&#10024;
+							{{evento.titulo}} - {{evento.getDataEvento}} 
 
-								(<a href="evento/?id={{evento.id}}">Editar</a>
-								/<a href="evento/delete/{{evento.id}}">Excluir</a>)</li>
+								<a href="evento/?id={{evento.id}}">(Editar</a>
+								<a href="evento/delete/{{evento.id}}">/Excluir)</a></li>
+
 
 						</div>
 
@@ -34,13 +31,20 @@
 									
 				{% endfor %} 
 
-					<div id='fundo'></div>
+				</div>
+					<!-- <div id='fundo'></div> -->
 
 					<div id="box">
 						
-						<a id='novoCad' href="evento/"><button type="button">Novo Evento</button></a>
+						<a id='novoCad' href="evento/">
+							<input class='btn-padrao'  type="submit" name="submit" value="Novo evento" id="submit" />
+							<!-- <button class='btn-padrao' type="button">Novo Evento</button> -->
+						</a>
 
-						<a  id='logout' href='/logout/'><button type="button">Logout</button></a>
+						<a  id='logout' href='/logout/'>
+							<input class='btn-padrao'  type="submit" name="Sair" value="Logout"/>
+							<!-- <button type="button">Logout</button> -->
+						</a>
 					</div>
 						
 			</ul>
@@ -50,7 +54,6 @@
 
 					
 
-						<!--<a  id='logout' href='/logout/'><button type="button">Logout</button></a>-->
+    </main> 
 				
-		</body>
-</html>
+{% endblock %}    

@@ -76,9 +76,6 @@ def submit_evento(request):
 	return redirect('/')
 
 
-
-
-
 @login_required(login_url='/login/')
 def delete_evento(request,id_evento):
 	usuario = request.user
