@@ -45,6 +45,8 @@ https://docs.djangoproject.com/en/3.2/intro/install/
 
 ## *Se tudo der certo, após rodar o servidor você verá a tela de login:*
 
+![tela de login](Agenda_Python_Django\telaLogin.png?raw=true  "Tela de login" )
+
 
  Entre com o usuário e senha abaixo:
 	
