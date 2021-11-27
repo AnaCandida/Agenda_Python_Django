@@ -3,7 +3,7 @@
 
 Esse projeto foi desenvolvido durante o módulo de Python no curso oferecido pela NL Informática.
 
-O Desafio consitia em :
+O Desafio consistia em :
 
  - Replicar/Clonar/Baixar o projeto original do seguinte repositório:   
    [https://github.com/leovd100/Agenda_Python_Django];
