@@ -65,4 +65,5 @@ Este foi meu primeiro contato com python e com o  Django. Precisei aprender sobr
  - Refatoração do css e aplicação do padrão de design, com reutilização de classes;
  - Responsividade das telas; 
  - Inserção de imagem em todas as telas;
+ - Troca de senha do superadmin;
  
