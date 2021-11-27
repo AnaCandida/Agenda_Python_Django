@@ -1,7 +1,7 @@
 # Agenda Python Django - replicada
 
 
-Esse projeto foi desenvolvido durante o modelo de Python no curso oferecido pela NL Informática.
+Esse projeto foi desenvolvido durante o módulo de Python no curso oferecido pela NL Informática.
 
 O Desafio consitia em :
 
