@@ -6,7 +6,11 @@
 
 
 <main class="container" style="background-image: url('{% static 'img\capa.png' %}');"> 
-				<h2>Evento</h2>
+
+	<section  class="container-conteudo">
+	
+	<h2 class="title-padrao">Novo Evento</h2>
+
 
 				<form id ='formulario' action="submit" method="POST">{% csrf_token %}
 					<div id ='boxform'>
@@ -52,10 +56,20 @@
 									<br><br>
 
 
-								<button type="submit">Salvar</button> <a href="/"> <button type="button" name="descricao"> Cancelar</button> </a>
+
+									<input class='btn-padrao'  type="submit" name="Salvar" value="salvar"/> 
+
+								<!-- <button type="submit">Salvar</button>  -->
+								<a href="/">
+								
+									<input class='btn-padrao'  type="submit" name="Cancelar" value="Cancelar"/>
+
+									<!-- <button type="button" name="descricao"> Cancelar</button> -->
+								 </a>
 				</div>
 				</form>
-
+		
+			</section>
 			</main> 
 
 {% endblock %}    
