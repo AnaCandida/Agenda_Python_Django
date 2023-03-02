@@ -4,7 +4,9 @@ metadata:
   name: Agenda_Python_Django
   annotations:
     github.com/project-slug: AnaCandida/Agenda_Python_Django
+    backstage.io/techdocs-ref: dir:.
+
 spec:
-  type: other
-  lifecycle: unknown
+  type: website
+  lifecycle: development
   owner: guests
