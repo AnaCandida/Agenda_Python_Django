@@ -8,6 +8,6 @@ metadata:
 
 
 spec:
-  type: other
-  lifecycle: unknown
-  owner: guests
+  type: web
+  lifecycle: development
+  owner: Ana
